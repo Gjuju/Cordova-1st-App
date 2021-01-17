@@ -239,7 +239,13 @@ function getMMMData() {
 
 // define Map Zoom
 function getZoom(y) {
-  let mz = Math.floor(Math.log(40000 / y) / Math.log(2));
+  let mz = Math.floor(Math.log(40000 / y) / Math.log(2)) - 1;
+  if (mapZoom > 20) {
+    mz = 20;
+  }
+  if (mapZoom < 1) {
+    mz = 1;
+  }
   return mz;
 }
 
