@@ -39,6 +39,9 @@ let imgURI;
 function onDeviceReady() {
   // Cordova is now initialized. Have fun!
   console.log("Fais ton readme !!!");
+  
+  // géoloc :
+  getPosition();
 
   // affiche accueil :
   /* accueil(); */
@@ -58,8 +61,6 @@ function onDeviceReady() {
   // file Camera :
   document.getElementById("savePic").addEventListener("click", moveFile, false);
 
-  // géoloc :
-  getPosition();
 }
 
 function setAccueil() {
